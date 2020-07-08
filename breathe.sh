@@ -5,7 +5,7 @@
 
 ORIGINAL_VALUE=$(cat /sys/class/leds/tpacpi::kbd_backlight/brightness)
 SEQUENCE="12"
-HERTZ=2
+PERIOD=2
 
 function cleanup {
     dbus-send --system --type=method_call --dest="org.freedesktop.UPower" "/org/freedesktop/UPower/KbdBacklight" "org.freedesktop.UPower.KbdBacklight.SetBrightness" int32:$ORIGINAL_VALUE
@@ -19,7 +19,7 @@ while getopts "q:t:h" opt; do
 	    SEQUENCE=$OPTARG
 	    ;;
 	t )
-	    HERTZ=$OPTARG
+	    PERIOD=$OPTARG
 	    ;;
 	h )
 	    printf "breathe: Simple CLI for cycling through backlight brightness modes \n\
@@ -33,7 +33,7 @@ while getopts "q:t:h" opt; do
     esac
 done
 
-WAIT=$(echo "scale=2; $HERTZ / $(expr length $SEQUENCE)" | bc)
+WAIT=$(echo "scale=2; $PERIOD / $(expr length $SEQUENCE)" | bc)
 
 SEQARR=$(echo $SEQUENCE | grep -o .)
 
