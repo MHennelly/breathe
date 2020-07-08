@@ -19,4 +19,4 @@ Here's a GIF that shows it working. Quality could be better, but I'm content
 with it. Anyways, this is it running with default settings of cycling between
 brightness mode 1 and mode 2 over a period of 2 seconds.
 
-![]ht GIF](./light
+![](./lightup.gif)
