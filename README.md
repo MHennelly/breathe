@@ -12,3 +12,11 @@ only tested on an X1 Carbon, so if it doesn't work on other systems you may need
 Run 'install.sh'. Make sure '/usr/local/bin' is in your path. Once installed, if you manually setup
 a keyboard shortcut which runs the command 'breathe-toggle' you can now toggle the breathe effect
 with whatever shorcut you chose.
+
+##### Demo
+
+Here's a GIF that shows it working. Quality could be better, but I'm content
+with it. Anyways, this is it running with default settings of cycling between
+brightness mode 1 and mode 2 over a period of 2 seconds.
+
+![]ht GIF](./light
